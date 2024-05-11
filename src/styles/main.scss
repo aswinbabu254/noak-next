@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection{
+    background-color: #0053E5;
+    color: #fff;
+}
+
+:root {
+
+    --inner-header-height: 81px;
+    // colors 
+    --primary: #0053E5;
+    --primary-light: #E6F2F8;
+    --primary-100 : #CFEEFF;
+    --primary-500: #45b5f080;
+    --primary-800: #45b5f0cc;
+    --primary-hover: #054dca;
+    --black: #000000;
+    --black-200: #232323;
+    --black-500 : #131417;
+    --white: #fff;
+    --white-60: rgba(255, 255, 255, 0.06);
+    --white-200: rgba(255, 255, 255, 0.2);
+    --white-700: rgba(255, 255, 255, 0.7);
+    --white-500: rgba(255, 255, 255, 0.05);
+    --white-600: rgba(78, 48, 48, 0.55);
+    --white-800: #e7f8ff;
+    --gray: #f0f0f0;
+    --success: #5aaf2c;
+    --danger: red;
+    --dark-gray: #25272A;
+    --yellow: #F0F3E4;
+    --modal-bg : rgba(0, 0, 0, 0.6);
+    --label : #393939;
+    --text-xs:#{size(12)};
+    --text-sm:#{size(14)};
+    --text-md:#{size(16)};
+    --text-p:#{size(18)};
+    --text-lg:#{size(20)};
+    --text-xl:#{size(22)};
+    --text-h6:#{size(24)};
+    --text-h5:#{size(30)};
+    --text-h4:#{size(36)};
+    --text-h3:#{size(45)};
+    --text-h2:60px;
+    --text-h1:80px;
+    --transparent: #00000000;
+    --js-gutter-x: 32px;
+
+    /* padding*/
+    --space-xs:#{size(4)};
+    --space-sm:#{size(6)};
+    --space-md:#{size(16)};
+    --space-lg:#{size(20)};
+
+    /* border radius */
+    --radius-sm: 4px;
+    --radius-sm2: 8px;
+    --radius-md: 15px;
+    --radius-lg: 80px;
+
+    /*border-color */
+    --border-color: #dee6f4;
+
+}
+
+// @layer utilities {
+//     .h-calc-viewport {
+//       height: calc(100vh - 80px);
+//     }
+//   }
+
+@layer base {
+
+    h1,
+    .h1 {
+        &:not(.ttl) {
+            @apply text-[40px] sm:text-[40px] lg:text-[60px] xxxl:text-h1;
+        }
+    }
+
+    h2,
+    .h2 {
+        &:not(.ttl) {
+            @apply text-[30px] sm:text-[50px] xl:text-h2;
+        }
+    }
+
+    h3,
+    .h3 {
+        &:not(.ttl) {
+            @apply text-[32px] sm:text-[32px] lg:text-[30px] xxxl:text-h3;
+        }
+    }
+
+    h4,
+    .h4 {
+        &:not(.ttl) {
+            @apply text-[25px] md:text-[30px] lg:text-[35px] xxxl:text-h4;
+        }
+    }
+
+    h5,
+    .h5 {
+        &:not(.ttl) {
+            @apply text-[18px] lg:text-[18px] xxxl:text-h5;
+        }
+    }
+
+    h6,
+    .h6 {
+        &:not(.ttl) {
+            @apply text-[20px] lg:text-[26px] xxxl:text-h6;
+        }
+    }
+
+    p,
+    .p {
+        &:not(.para) {
+            @apply text-[16px] md:text-lg lg:text-para;
+        }
+    }
+}
+
+
+
+
+// Buttons
+.btn {
+    @apply text-center tracking-[1.1px] transition px-5 py-4 ease-in-out leading-[1.36] whitespace-nowrap text-sm cursor-pointer inline-block;
+    transition: all 0.5s;
+
+    &:not(.btn-link):not(.sm):not(.xs) {
+        @apply px-[30px] py-[15px] min-w-[199px];
+    }
+
+    &.lg {
+        @apply min-w-[210px];
+    }
+
+    &.sm {
+        @apply min-w-[176px] px-[22px] py-[14px] tracking-[0.3px];
+    }
+
+    &.xs {
+        @apply min-w-[114px] px-[22px] py-[13.5px] tracking-[0.3px];
+    }
+
+    &-primary {
+        @apply bg-primary border border-primary text-white font-bold xl:hover:bg-primary-hover xl:hover:border-primary-hover;
+    }
+
+    &-dark {
+        @apply bg-black text-white border border-black hover:bg-transparent hover:text-black;
+    }
+
+    &-light {
+        @apply bg-white text-black border border-white hover:bg-transparent hover:text-white;
+    }
+
+    &-outline-dark {
+        @apply bg-transparent text-black border border-black font-medium hover:bg-black hover:text-white;
+    }
+
+    &-outline-light {
+        @apply bg-transparent text-white border border-white font-medium hover:bg-white hover:text-black;
+    }
+
+    &-link {
+        @apply text-current;
+    }
+}
+
+
+
+.container {
+    @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxxl:max-w-[1130px];
+
+    &.sm {
+        @apply xl:max-w-[1100px] xxxl:max-w-[1112px];
+    }
+
+    &.xs {
+        @apply xl:max-w-[720px] xxxl:max-w-[882px];
+    }
+}
+
+.ff-primary {
+    font-family: var(--font-dm-sans);
+}
+
+.ff-secondary {
+    font-family: var(--font-dm-serif);
+}
+
+.stretched-link {
+    @apply before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-10
+}
+
+.badge {
+    @apply inline-block text-[14px] bg-[#DAFF74] rounded-[100px] px-4 py-1
+}
+
+.form {
+
+    .form-field {
+
+        label {
+            @apply block text-label text-[16px] mb-[10px];
+        }
+
+        input {
+            @apply leading-[1];
+        }
+        .select__control--is-focused.select__control--menu-is-open{
+            @apply border-b-[#000]
+        }
+
+        input,
+        textarea {
+            @apply px-[18px] py-[16px] bg-[#F8F8F8] rounded-none w-full border-b  placeholder-shown:border-b-[#D8D8D8]  outline-none text-[#000000] text-[16px] border-b-[#000] active:border-b-[#000] focus-visible:border-b-[#000];
+        }
+
+        textarea {
+            @apply min-h-[103px];
+        }
+
+        .intl-tel-input .flag-container{
+            @apply left-0
+        }
+
+        .intl-tel-input .flag-container .country-list{
+            @apply w-full;
+        }
+
+        .intl-tel-input .selected-flag{
+            @apply w-[100px]
+
+        }
+
+        .intl-tel-input .selected-dial-code{
+            @apply min-w-[26px] min-h-[24px]
+        }
+
+        .form .form-field .intl-tel-input .separate-dial-code .selected-flag{
+            @apply w-[100px]
+        }
+
+        .intl-tel-input .iti-flag{
+            @apply opacity-0
+        }
+
+        .intl-tel-input.allow-dropdown .iti-flag{
+            @apply opacity-100
+        }
+
+
+
+        .intl-tel-input.allow-dropdown.separate-dial-code .selected-flag{
+            @apply flex w-[100px] bg-transparent;
+        }
+
+        .intl-tel-input.allow-dropdown.separate-dial-code .selected-flag .arrow{
+            @apply before:w-[1px] before:h-[50%] before:bg-[rgb(216,216,216)] before:right-0 before:top-[50%] before:absolute before:translate-y-[-50%] after:content-[""] after:w-[7px] after:h-[7px] after:border-[#000] after:border-b-[1.5px] after:border-r-[1.5px]  after:origin-right after:rotate-[45deg]  after:block;
+
+            &.up{
+            
+            }
+        }
+
+        .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code{
+         @apply pl-0 ml-[5px];
+        }
+    }
+}
+
+body, input, textarea, select, button {
+    font-synthesis: none;
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // direction: ltr;
+    // text-align: left;
+}
+
+// removing autofill color
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+
+
+    @apply bg-[#F8F8F8];
+
+
+    -webkit-box-shadow: 0 0 0 50px #F8F8F8 inset !important;
+}

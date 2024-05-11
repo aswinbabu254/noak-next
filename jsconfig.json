@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/styles/*": ["src/styles/*"],
+      "@/components/*": ["src/components/*"],
+      "@/widgets/*": ["src/widgets/*"],
+      "@/logic/*": ["src/logic/*"],
+      "@/data/*": ["src/api/staticData/*"],
+      "@/images/*": ["public/images/*"],
+    }
+  }
+}
