@@ -32,7 +32,7 @@ const ContactUs = ({data}) => {
               <button className="btn btn-primary !inline-flex group font-bold xs:w-full justify-center">
                 <span>Send Message</span>
                 <svg className="ml-5 transition-transform will-change-transform duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.49219 12.0017H20.5026M20.5026 12.0017L12.8479 4.91406M20.5026 12.0017L12.8479 19.0894" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.49219 12.0017H20.5026M20.5026 12.0017L12.8479 4.91406M20.5026 12.0017L12.8479 19.0894" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </div>
