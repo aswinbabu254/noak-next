@@ -11,7 +11,6 @@ export function generateMetadata() {
     },
   };
 }
-
 const HomePage = () => {
   return (
     <>
